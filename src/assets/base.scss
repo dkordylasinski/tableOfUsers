@@ -1,0 +1,56 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import './breakpoints.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Inter", serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: $black;
+}
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 50px;
+  margin: 0 auto;
+  @media (max-width: $br-mobile) {
+      padding: 0 16px;
+  }
+}
+.gray-text {
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  color: $gray4;
+}
+.checkbox-wrapp {
+  cursor: pointer;
+}
+.checkbox-wrapp input {
+  display: none;
+}
+.checkbox-wrapp svg {
+  overflow: visible;
+}
+.path {
+  fill: none;
+  stroke: $gray6;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+  transition: .6s;
+}
+.checkbox-wrapp input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: $black;
+}
