@@ -28,8 +28,8 @@
     </div>
 </template>
 <style lang="scss" scoped>
-    @import '../assets/variables.scss';
-    @import '../assets/breakpoints.scss';
+    @use '../assets/variables.scss' as *;
+    @use '../assets/breakpoints.scss' as *;
 
     .heading-title {
         font-size: 2rem;

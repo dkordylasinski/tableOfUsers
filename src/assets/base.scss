@@ -1,6 +1,6 @@
-@import './fonts.scss';
-@import './variables.scss';
-@import './breakpoints.scss';
+@use './fonts.scss' as *;
+@use './variables.scss' as *;
+@use './breakpoints.scss' as *;
 
 *,
 *::before,

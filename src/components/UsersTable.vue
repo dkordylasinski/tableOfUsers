@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="user in paginatedUsers" :key="user">
+                    <tr v-for="user in paginatedUsers" :key="user.name">
                         <td class="whitespace-nowrap w-10 xl:w-[4.125rem]">
                             <div class="flex justify-center">
                                 <label class="checkbox-wrapp">
@@ -60,7 +60,7 @@
             </table>
         </div>
         <ul class="flex sm:hidden flex-col gap-2">
-            <user-mobile-li v-for="user in paginatedUsers" :key="user" :user="user" :registrationDate="formattedDate(user.registrationDate)"></user-mobile-li>
+            <user-mobile-li v-for="user in paginatedUsers" :key="user.name" :user="user" :registrationDate="formattedDate(user.registrationDate)"></user-mobile-li>
         </ul>
     </div>
 </template>
@@ -135,7 +135,7 @@
     }
 
     function sortDate(column: keyof User): void {
-        if (column === 'date' && sortDirection.value !== 'asc') {
+        if (column === 'date' as keyof User && sortDirection.value !== 'asc') {
             ascSort = true;
         } else {
             ascSort = false;
@@ -150,10 +150,11 @@
 
         emit('sort', column, sortDirection.value);
     }
+
 </script>
 <style scoped lang="scss">
-    @import  '../assets/breakpoints.scss';
-    @import '../assets/variables.scss';
+    @use  '../assets/breakpoints.scss' as *;
+    @use '../assets/variables.scss' as *;
 
     .table-wrapper {
         &::-webkit-scrollbar {

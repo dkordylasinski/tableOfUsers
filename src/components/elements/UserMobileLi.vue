@@ -11,16 +11,16 @@
         </div>
         <div class="flex items-center gap-2.5 mb-4">
             <div>
-                <img :src='user.image' class="w-8 h-8 rounded-full min-w-8">
+                <img :src='user?.image' class="w-8 h-8 rounded-full min-w-8">
             </div>
             <div>
-                <p>{{ user.name }}</p>
-                <p class="gray-text">{{ user.email }}</p>
+                <p>{{ user?.name }}</p>
+                <p class="gray-text">{{ user?.email }}</p>
             </div>
         </div>
         <div class="flex items-center gap-2.5">
-            <img :src="'https://flagsapi.com/' + user.nat + '/shiny/64.png'" class="w-3.5 h-auto">
-            <p class="country">{{ user.country }}</p>
+            <img :src="'https://flagsapi.com/' + user?.nat + '/shiny/64.png'" class="w-3.5 h-auto">
+            <p class="country">{{ user?.country }}</p>
         </div>
     </li>
 </template>

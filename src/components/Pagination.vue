@@ -112,8 +112,8 @@
 </script>
 
 <style scoped lang="scss">
-    @import '../assets/variables.scss';
-    @import '../assets/breakpoints.scss';
+    @use '../assets/variables.scss' as *;
+    @use '../assets/breakpoints.scss' as *;
 
     button {
         border-radius: 0.75rem;

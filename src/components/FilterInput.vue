@@ -47,8 +47,8 @@
 </script>
 
 <style scoped lang="scss">
-    @import '../assets/variables.scss';
-    @import '../assets/breakpoints.scss';
+    @use '../assets/variables.scss' as *;
+    @use '../assets/breakpoints.scss' as *;
 
     .search-input {
         outline: none;

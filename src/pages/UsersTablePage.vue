@@ -56,11 +56,22 @@
         users.value.sort((a, b) => {
             const valueA = a[column] ?? '';
             const valueB = b[column] ?? '';
-            return direction === 'asc'
-                ? valueA.localeCompare(valueB)
-                : valueB.localeCompare(valueA);
+
+            if (typeof valueA === 'string' && typeof valueB === 'string') {
+                return direction === 'asc'
+                    ? valueA.localeCompare(valueB)
+                    : valueB.localeCompare(valueA);
+            }
+
+            if (valueA instanceof Date && valueB instanceof Date) {
+                return direction === 'asc'
+                    ? valueA.getTime() - valueB.getTime()
+                    : valueB.getTime() - valueA.getTime();
+            }
+
+            return 0;
         });
-    }
+    };
 
     const onSortDate = (column: keyof User, direction: 'asc' | 'desc') => {
         users.value.sort((a, b) => {
