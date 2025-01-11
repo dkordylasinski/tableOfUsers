@@ -65,7 +65,7 @@
     </div>
 </template>
 <script setup lang="ts">
-    import { defineProps, ref, computed } from 'vue';
+    import { ref, computed } from 'vue';
     import { User } from '../interfaces/User';
     import UserMobileLi from './elements/UserMobileLi.vue';
 
