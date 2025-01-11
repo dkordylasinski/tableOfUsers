@@ -5,9 +5,9 @@
             <select
                 v-model="selectedValue"
                 @change="updateRecordsPerPage"
-                class="px-4 py-2.5 pr-6 border rounded-xl"
+                class="px-4 py-2.5 pr-6 border rounded-xl bg-white"
             >
-                <option v-for="option in options" :key="option" :value="option">
+                <option v-for="option in options" :key="option" :value="option" class="bg-white">
                     {{ option }}
                 </option>
             </select>
@@ -43,9 +43,5 @@
     select {
         border-color: $gray;
         appearance: none;
-        background-color: $white;
-        option {
-            background-color: $white;
-        }
     }
 </style>

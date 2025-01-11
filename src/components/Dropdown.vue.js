@@ -25,12 +25,13 @@ function __VLS_template() {
     __VLS_elementAsFunction(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({
         ...{ onChange: (__VLS_ctx.updateRecordsPerPage) },
         value: ((__VLS_ctx.selectedValue)),
-        ...{ class: ("px-4 py-2.5 pr-6 border rounded-xl") },
+        ...{ class: ("px-4 py-2.5 pr-6 border rounded-xl bg-white") },
     });
     for (const [option] of __VLS_getVForSourceType((__VLS_ctx.options))) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
             key: ((option)),
             value: ((option)),
+            ...{ class: ("bg-white") },
         });
         (option);
     }
@@ -42,7 +43,7 @@ function __VLS_template() {
     __VLS_elementAsFunction(__VLS_intrinsicElements.path)({
         d: ("M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"),
     });
-    ['flex', 'items-center', 'justify-between', 'sm:justify-start', 'gap-3', 'gray-text', 'relative', 'px-4', 'py-2.5', 'pr-6', 'border', 'rounded-xl', 'absolute', 'right-2.5', 'top-1/2', 'w-3', '-translate-y-1/2',];
+    ['flex', 'items-center', 'justify-between', 'sm:justify-start', 'gap-3', 'gray-text', 'relative', 'px-4', 'py-2.5', 'pr-6', 'border', 'rounded-xl', 'bg-white', 'bg-white', 'absolute', 'right-2.5', 'top-1/2', 'w-3', '-translate-y-1/2',];
     var __VLS_slots;
     var $slots;
     let __VLS_inheritedAttrs;
