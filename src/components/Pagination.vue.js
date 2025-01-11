@@ -1,4 +1,4 @@
-import { defineProps, defineEmits, computed } from 'vue';
+import { computed } from 'vue';
 const props = defineProps();
 const emit = defineEmits();
 const totalPages = computed(() => Math.ceil(props.totalRecords / props.recordsPerPage));

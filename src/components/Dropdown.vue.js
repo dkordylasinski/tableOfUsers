@@ -1,4 +1,4 @@
-import { ref, defineEmits, defineProps } from 'vue';
+import { ref } from 'vue';
 const props = defineProps();
 const emit = defineEmits();
 const selectedValue = ref(props.defaultValue);

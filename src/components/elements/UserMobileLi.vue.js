@@ -1,4 +1,3 @@
-import { defineProps } from 'vue';
 const props = defineProps({
     user: Object,
     registrationDate: String,

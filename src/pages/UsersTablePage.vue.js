@@ -4,6 +4,7 @@ import FilterInput from '../components/FilterInput.vue';
 import Dropdown from '../components/Dropdown.vue';
 import Pagination from '../components/Pagination.vue';
 import Heading from '../components/Heading.vue';
+import Loader from '../components/elements/Loader.vue';
 import { fetchUsers } from '../services/userService';
 let usersNumber = 1005;
 const users = ref([]);
@@ -91,75 +92,83 @@ function __VLS_template() {
     let __VLS_7;
     let __VLS_8;
     var __VLS_9;
-    if (__VLS_ctx.users[0]) {
+    if (!__VLS_ctx.users[0]) {
+        __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+        // @ts-ignore
+        /** @type { [typeof Loader, typeof Loader, ] } */ ;
+        // @ts-ignore
+        const __VLS_12 = __VLS_asFunctionalComponent(Loader, new Loader({}));
+        const __VLS_13 = __VLS_12({}, ...__VLS_functionalComponentArgsRest(__VLS_12));
+    }
+    else {
         __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
         // @ts-ignore
         /** @type { [typeof UsersTable, typeof UsersTable, ] } */ ;
         // @ts-ignore
-        const __VLS_12 = __VLS_asFunctionalComponent(UsersTable, new UsersTable({
+        const __VLS_17 = __VLS_asFunctionalComponent(UsersTable, new UsersTable({
             ...{ 'onSort': {} },
             users: ((__VLS_ctx.filteredUsersF)),
             recordsPerPage: ((__VLS_ctx.recordsPerPage)),
             currentPage: ((__VLS_ctx.currentPage)),
         }));
-        const __VLS_13 = __VLS_12({
+        const __VLS_18 = __VLS_17({
             ...{ 'onSort': {} },
             users: ((__VLS_ctx.filteredUsersF)),
             recordsPerPage: ((__VLS_ctx.recordsPerPage)),
             currentPage: ((__VLS_ctx.currentPage)),
-        }, ...__VLS_functionalComponentArgsRest(__VLS_12));
-        let __VLS_17;
-        const __VLS_18 = {
+        }, ...__VLS_functionalComponentArgsRest(__VLS_17));
+        let __VLS_22;
+        const __VLS_23 = {
             onSort: (__VLS_ctx.onSort)
         };
-        let __VLS_14;
-        let __VLS_15;
-        var __VLS_16;
+        let __VLS_19;
+        let __VLS_20;
+        var __VLS_21;
         __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
             ...{ class: ("flex lg:justify-between flex-col-reverse sm:flex-col lg:items-center lg:flex-row gap-4 sm:gap-5") },
         });
         // @ts-ignore
         /** @type { [typeof Dropdown, typeof Dropdown, ] } */ ;
         // @ts-ignore
-        const __VLS_19 = __VLS_asFunctionalComponent(Dropdown, new Dropdown({
+        const __VLS_24 = __VLS_asFunctionalComponent(Dropdown, new Dropdown({
             ...{ 'onUpdateRecordsPerPage': {} },
             options: (([10, 20, 50, 100, 200])),
             defaultValue: ((__VLS_ctx.recordsPerPage)),
         }));
-        const __VLS_20 = __VLS_19({
+        const __VLS_25 = __VLS_24({
             ...{ 'onUpdateRecordsPerPage': {} },
             options: (([10, 20, 50, 100, 200])),
             defaultValue: ((__VLS_ctx.recordsPerPage)),
-        }, ...__VLS_functionalComponentArgsRest(__VLS_19));
-        let __VLS_24;
-        const __VLS_25 = {
+        }, ...__VLS_functionalComponentArgsRest(__VLS_24));
+        let __VLS_29;
+        const __VLS_30 = {
             onUpdateRecordsPerPage: (__VLS_ctx.onUpdateRecordsPerPage)
         };
-        let __VLS_21;
-        let __VLS_22;
-        var __VLS_23;
+        let __VLS_26;
+        let __VLS_27;
+        var __VLS_28;
         // @ts-ignore
         /** @type { [typeof Pagination, typeof Pagination, ] } */ ;
         // @ts-ignore
-        const __VLS_26 = __VLS_asFunctionalComponent(Pagination, new Pagination({
+        const __VLS_31 = __VLS_asFunctionalComponent(Pagination, new Pagination({
             ...{ 'onNewCurrentPage': {} },
             recordsPerPage: ((__VLS_ctx.recordsPerPage)),
             totalRecords: ((__VLS_ctx.usersNumber)),
             currentPage: ((__VLS_ctx.currentPage)),
         }));
-        const __VLS_27 = __VLS_26({
+        const __VLS_32 = __VLS_31({
             ...{ 'onNewCurrentPage': {} },
             recordsPerPage: ((__VLS_ctx.recordsPerPage)),
             totalRecords: ((__VLS_ctx.usersNumber)),
             currentPage: ((__VLS_ctx.currentPage)),
-        }, ...__VLS_functionalComponentArgsRest(__VLS_26));
-        let __VLS_31;
-        const __VLS_32 = {
+        }, ...__VLS_functionalComponentArgsRest(__VLS_31));
+        let __VLS_36;
+        const __VLS_37 = {
             onNewCurrentPage: (__VLS_ctx.newCurrentPage)
         };
-        let __VLS_28;
-        let __VLS_29;
-        var __VLS_30;
+        let __VLS_33;
+        let __VLS_34;
+        var __VLS_35;
     }
     ['wrapper', 'my-8', 'sm:my-[3.125rem]', 'flex', 'lg:justify-between', 'flex-col-reverse', 'sm:flex-col', 'lg:items-center', 'lg:flex-row', 'gap-4', 'sm:gap-5',];
     var __VLS_slots;
@@ -185,6 +194,7 @@ const __VLS_self = (await import('vue')).defineComponent({
             Dropdown: Dropdown,
             Pagination: Pagination,
             Heading: Heading,
+            Loader: Loader,
             usersNumber: usersNumber,
             users: users,
             filter: filter,

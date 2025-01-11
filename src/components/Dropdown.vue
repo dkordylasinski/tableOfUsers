@@ -43,5 +43,9 @@
     select {
         border-color: $gray;
         appearance: none;
+        background-color: $white;
+        option {
+            background-color: $white;
+        }
     }
 </style>
