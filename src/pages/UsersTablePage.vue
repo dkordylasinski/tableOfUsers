@@ -2,7 +2,10 @@
     <div class="wrapper my-8 sm:my-[3.125rem]">
         <heading></heading>
         <filter-input v-model="filter" @sortedByName="updateFilter"></filter-input>
-        <div v-if="users[0]">
+        <div v-if="!users[0]">
+            <loader></loader>
+        </div>
+        <div v-else>
             <users-table 
                 :users="filteredUsersF" 
                 :recordsPerPage="recordsPerPage"
@@ -29,6 +32,7 @@
     import Dropdown from '../components/Dropdown.vue';
     import Pagination from '../components/Pagination.vue';
     import Heading from '../components/Heading.vue';
+    import Loader from '../components/elements/Loader.vue';
     import { fetchUsers } from '../services/userService';
     import { User } from '../interfaces/User';
 
