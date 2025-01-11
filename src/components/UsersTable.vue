@@ -59,7 +59,7 @@
                 </tbody>
             </table>
         </div>
-        <ul class="flex sm:hidden flex-col gap-2">
+        <ul class="flex sm:hidden flex-col gap-2 mb-6">
             <user-mobile-li v-for="user in paginatedUsers" :key="user.name" :user="user" :registrationDate="formattedDate(user.registrationDate)"></user-mobile-li>
         </ul>
     </div>

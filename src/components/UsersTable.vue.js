@@ -230,7 +230,7 @@ function __VLS_template() {
         });
     }
     __VLS_elementAsFunction(__VLS_intrinsicElements.ul, __VLS_intrinsicElements.ul)({
-        ...{ class: ("flex sm:hidden flex-col gap-2") },
+        ...{ class: ("flex sm:hidden flex-col gap-2 mb-6") },
     });
     for (const [user] of __VLS_getVForSourceType((__VLS_ctx.paginatedUsers))) {
         // @ts-ignore
@@ -247,7 +247,7 @@ function __VLS_template() {
             registrationDate: ((__VLS_ctx.formattedDate(user.registrationDate))),
         }, ...__VLS_functionalComponentArgsRest(__VLS_0));
     }
-    ['table-wrapper', 'overflow-auto', 'sm:overflow-x-scroll', 'hidden', 'sm:block', 'overflow-hidden', 'border-separate', 'border-spacing-y-0.5', 'w-full', 'rounded-xl', 'relative', 'mb-8', 'min-w-[57.813rem]', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'items-center', 'gap-1', 'asc', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'justify-center', 'checkbox-wrapp', 'path', 'name-cell', 'flex', 'items-center', 'gap-2.5', 'w-6', 'h-6', 'rounded-full', 'flex', 'items-center', 'gap-2.5', 'w-[1.063rem]', 'h-auto', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'justify-center', 'flex', 'sm:hidden', 'flex-col', 'gap-2',];
+    ['table-wrapper', 'overflow-auto', 'sm:overflow-x-scroll', 'hidden', 'sm:block', 'overflow-hidden', 'border-separate', 'border-spacing-y-0.5', 'w-full', 'rounded-xl', 'relative', 'mb-8', 'min-w-[57.813rem]', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'items-center', 'gap-1', 'asc', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'justify-center', 'checkbox-wrapp', 'path', 'name-cell', 'flex', 'items-center', 'gap-2.5', 'w-6', 'h-6', 'rounded-full', 'flex', 'items-center', 'gap-2.5', 'w-[1.063rem]', 'h-auto', 'whitespace-nowrap', 'w-10', 'xl:w-[4.125rem]', 'flex', 'justify-center', 'flex', 'sm:hidden', 'flex-col', 'gap-2', 'mb-6',];
     var __VLS_slots;
     var $slots;
     let __VLS_inheritedAttrs;
